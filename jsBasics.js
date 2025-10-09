@@ -8,7 +8,7 @@ const cat={
         console.log("meow function call inside cat object");
         console.log(`${this.name}meow function call inside cat object`);
         console.log("next line");
-        console.log(`${this.name}"meow function call inside cat object"`);
+       console.log(`${this.name}"meow function call inside cat object"`); 
     }
 }
 
@@ -24,3 +24,22 @@ function m3()
      console.log("3rd function");
 }
 
+
+
+
+
+
+//now call  
+
+console.log("//now call  ");
+
+console.log("cat.meow();");
+cat.meow();
+
+
+console.log("meow2_outside_cat_object()");
+meow2_outside_cat_object();
+
+
+console.log("m3();");
+m3();
