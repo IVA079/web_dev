@@ -59,3 +59,18 @@ m3();
 
 
 
+////////try and catch///////////////////////////////////////////////
+
+console.log("test try and catch ")
+function func_name(msg)
+{
+try{
+//msg.toUpperCase().repeat(2);
+
+console.log(msg.toUpperCase().repeat(2));
+}
+catch(e)
+{
+console.log("error.enter String ");
+}
+}
