@@ -71,6 +71,31 @@ console.log(msg.toUpperCase().repeat(2));
 }
 catch(e)
 {
-console.log("error.enter String ");
+console.log("error.enter String ");//this block will catch any sort of error then print this
 }
+
 }
+
+
+// now call function func_name("message")
+//func_name(12345)
+
+
+
+
+
+
+
+////////////''''''''Arrow function''''''''''''''''''''/////////////
+const sum=(a,b)=>
+{
+    console.log(a+b);
+}
+
+
+
+//////////////set time out//////////////////////
+console.log(" befor time out ");
+setTimeout(() => {
+    console.log(" set time out  is 4 s");
+}, 4000);// you will see "set time out  is 4 s" this line after 4 s
