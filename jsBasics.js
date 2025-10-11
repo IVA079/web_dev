@@ -224,3 +224,33 @@ return t.toUpperCase();
 
 texts;
 newarr;
+
+
+
+//filter: creates a new array with all elements that pass the test implemented by the provided function
+let nums=[1,2,3,4];
+
+let ans=nums.filter(funcname6);
+
+function funcname6(n)
+{
+
+if( n%2==1)
+{
+    return n;
+}
+
+
+}
+
+
+
+//every: returns true if every element of array gives true for some function .else returns false
+
+let words=['abc','zxc','mnb'];
+let result=words.every((e)=>
+{
+   return e.length==3;
+})
+
+console.log(result);
