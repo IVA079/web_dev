@@ -354,3 +354,40 @@ function sum2(a=2,b)
 
 sum2(1,2);
 sum2(10);//b undefiened
+
+//Default parameters make sure your function always has a value even if the caller forgets to pass one.
+
+
+
+
+
+
+///spread
+//The spread operator expands an array (or iterable) into individual elements — perfect for passing multiple values as separate arguments to a function.
+
+arr3=[1,2,3]
+Math.min(1,2,3);
+Math.min(...arr3);
+
+
+
+
+
+function add3(a,b,c)
+{
+    return a+b+c;
+}
+const number4=[10,20,30];
+console.log(add3(...number4));
+
+
+
+
+function greet5(greeting,name1,name2)
+{
+console.log(`${greeting} , ${name1} and ${name2}`);
+}
+
+const name3=["alice","bob"];
+
+greet5("hello",...name3);
