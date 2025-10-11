@@ -125,11 +125,15 @@ const student=
 
     getnameByArrowFunc:()=>
     {
-     console.log(this);            
-        console.log(this.name);///rule of this " this keyword" for arrow function: parents scope
+     
+        console.log(`the name is ${this.name}`);
+        console.log(this);            
+        console.log(this.name);
+        ///rule of this " this keyword" for arrow function: parents scope
         //who is the parent of "getnameByArrowFunc:()" function?student
         //what is the scope of student object?global
-        //for arrow function this means parent scope
+        //for arrow function this means parent's scope
+
 
     },
     funcname3:function()
@@ -137,7 +141,8 @@ const student=
 setTimeout(()=>
 {
     console.log("set time out function inside fun3 ");
-    console.log(this);///.   parent of set time out function  is func3
+    console.log(this);
+    ///.   parent of set time out function  is func3
     //the scope of func 3 is student 
 },3000
 );
@@ -153,3 +158,52 @@ setTimeout(()=>
 
 }
 };
+
+
+
+
+
+
+///////////////array method////////////////////////////////////
+
+let arr=[1,2,3,4];
+function print(el)
+{
+    console.log(el)
+}
+
+
+
+arr.forEach(print);
+
+
+
+
+console.log("example 2");
+let arr2=[{name:"a",
+    marks:100
+},
+{
+    name:'b',
+    marks:90
+}];
+
+
+
+console.log("arrow function take arguments 0 to n")
+arr2.forEach((e)=>
+{
+    console.log(e.marks);
+})
+
+//call function for each element 
+
+
+console.log("normal function ")
+function fun_arr2(e)
+{
+console.log(e);
+}
+
+arr2.forEach(fun_arr2);
+
