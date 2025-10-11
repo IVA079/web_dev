@@ -254,3 +254,45 @@ let result=words.every((e)=>
 })
 
 console.log(result);
+
+
+
+
+let words2=['abc','zxc','mnb'];
+let result2=words2.every((e)=>
+{
+   if(e.length==3)
+   {
+    return true;
+   }
+
+   else{
+    return false;
+   }
+})
+
+console.log(result);
+
+
+
+///reduce
+
+
+
+let prices=[9,10,12,13,14];
+
+let total=0;
+for(let price of prices)
+{
+    total=total+price;
+}
+console.log(total);
+
+
+
+let total2=prices.reduce((total,price)=>
+{
+    return total+price;
+})
+
+console.log(total);
