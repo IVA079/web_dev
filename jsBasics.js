@@ -314,3 +314,43 @@ let result3=nums2.reduce((max,e)=>
         return max;
     }
 })
+
+
+
+//default parameter
+
+
+function greet2(name='friend')
+{
+console.log(`hello,${name} !`)
+}
+
+
+greet2();
+greet2("iva");
+
+
+
+
+
+function add(a=10,b=5)
+{
+    return a+b;
+}
+
+
+console.log(add(3,7));
+console.log(add(3));
+console.log(add());
+
+
+
+
+function sum2(a=2,b)
+{
+    return a+b;
+}
+
+
+sum2(1,2);
+sum2(10);//b undefiened
