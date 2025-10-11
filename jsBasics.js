@@ -129,7 +129,7 @@ const student=
         console.log(this.name);///rule of this " this keyword" for arrow function: parents scope
         //who is the parent of "getnameByArrowFunc:()" function?student
         //what is the scope of student object?global
-        //for arrow function this means parent scope
+        //for arrow function this means parent's scope
 
     },
     funcname3:function()
@@ -138,7 +138,7 @@ setTimeout(()=>
 {
     console.log("set time out function inside fun3 ");
     console.log(this);///.   parent of set time out function  is func3
-    //the scope of func 3 is student 
+    //the scope of func3 is student 
 },3000
 );
     },
