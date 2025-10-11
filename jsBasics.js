@@ -295,4 +295,22 @@ let total2=prices.reduce((total,price)=>
     return total+price;
 })
 
-console.log(total);
+console.log(total2);
+
+
+
+
+
+/// finding maximum in array using reduce
+let max=0;
+let nums2=[1,2,3,4,5,-1,12,9,100,6];
+let result3=nums2.reduce((max,e)=>
+{
+    if(e>max)
+    {
+        return e;
+    }
+    else{
+        return max;
+    }
+})
