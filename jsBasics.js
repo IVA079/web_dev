@@ -133,7 +133,10 @@ const student=
         //who is the parent of "getnameByArrowFunc:()" function?student
         //what is the scope of student object?global
         //for arrow function this means parent's scope
+<<<<<<< HEAD
 
+=======
+>>>>>>> f2541de8adce16b359d510425cbc8d0afc5c87d1
 
     },
     funcname3:function()
@@ -141,9 +144,14 @@ const student=
 setTimeout(()=>
 {
     console.log("set time out function inside fun3 ");
+<<<<<<< HEAD
     console.log(this);
     ///.   parent of set time out function  is func3
     //the scope of func 3 is student 
+=======
+    console.log(this);///.   parent of set time out function  is func3
+    //the scope of func3 is student 
+>>>>>>> f2541de8adce16b359d510425cbc8d0afc5c87d1
 },3000
 );
     },
@@ -158,6 +166,7 @@ setTimeout(()=>
 
 }
 };
+<<<<<<< HEAD
 
 
 
@@ -207,3 +216,5 @@ console.log(e);
 
 arr2.forEach(fun_arr2);
 
+=======
+>>>>>>> f2541de8adce16b359d510425cbc8d0afc5c87d1
