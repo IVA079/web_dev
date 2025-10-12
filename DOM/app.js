@@ -109,6 +109,28 @@ document.getElementsByName("abc");
 console.log(document.getElementsByName("abc"));
 
 
+document.getElementsByClassName('oldImg');
+
+//HTMLCollection(3) [img.oldImg, img.oldImg, img.oldImg]....found 3 object with 'oldImg' class name.
+
+//if you want access only first object ,then what we can do?
+
+
+document.getElementsByClassName('oldImg')[0];
+
+
+
+let all_element_of_oldimg_class_name=document.getElementsByClassName('oldImg');
+
+
+let totalimage=all_element_of_oldimg_class_name.length;
+
+
+for(let i=0;i<totalimage;i++)
+{
+    all_element_of_oldimg_class_name[i].src="assets 3/creation_1.png";
+    console.log(`value of image no :${i}is changed`);
+}
 
 
 
