@@ -391,3 +391,66 @@ console.log(`${greeting} , ${name1} and ${name2}`);
 const name3=["alice","bob"];
 
 greet5("hello",...name3);
+
+
+
+//array literal
+let arr4=[1,2,3];
+let arr5=[5,6,7];
+
+let arr6=[...arr5,...arr4];
+
+
+
+//object literal
+
+let info=
+{
+    name:'bob',
+    id:3,
+    school:'abc'
+}
+
+let info_copy={...info,location:"zxcvnmm"};//object
+let array_to_object={...arr6};
+
+
+//rest (...) collects all remaing arguments into an actual array
+
+
+
+function countnumber(...nums)
+{
+console.log(nums);
+}
+
+countnumber(1,6,9,8);
+
+
+let sum3=0;
+function sum4(...numbers_into_array)
+{
+return numbers_into_array.reduce((sum3,e)=>{
+    return sum3+e;
+})
+}
+console.log(sum4(1,2,3));
+
+
+let colors=['red','blue','green','yellow']
+
+let [first,...others]=colors;
+console.log(first);
+console.log(others);
+
+
+
+
+function prize(prize1,prize2,...alltypeprize)
+{
+    console.log(prize1);
+    console.log(prize2);
+    console.log(alltypeprize);
+}
+
+prize("acvv","bnn","rrt","cvvbb","nmnbv");
