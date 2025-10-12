@@ -60,4 +60,56 @@ console.log(document.firstElementChild.lastElementChild);   // <body>
 
 
 
+/**
+ * What is a Text Node?
+
+When you write:
+
+<h1>Hello World</h1>
+
+
+the browser DOM actually sees this as:
+
+H1
+ └── #text ("Hello World")
+
+
+So, every piece of visible text is wrapped in a text node (#text)
+ */
+
+
+let heading =document.firstElementChild.firstElementChild.firstElementChild;
+
+
+
+let a=document.firstElementChild;
+let b=a.lastElementChild;
+b.style.color='blue';
+b.style.color='black';
+
+
+
+
+
+
+
+
+
+
+
+/////// get element by class name:  document.getElementsByClassName("className");
+
+//document: whole web page
+// get element by class name(): find all element with that class
+
+//it return one  html collection ,not a single element
+
+
+document.getElementsByName("abc");
+console.log(document.getElementsByName("abc"));
+
+
+
+
+
 
