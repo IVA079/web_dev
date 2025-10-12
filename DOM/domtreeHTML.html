@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM Tree View</title>
+  <link rel="stylesheet" href="domtreecss.css">
+</head>
+<body>
+  <h2>DOM Tree Structure</h2>
+
+  <div class="dom-tree">
+    <div class="box">HTML
+      <div class="child">
+        <div class="box">HEAD
+          <div class="child">
+            <div class="box">META</div>
+            <div class="box">TITLE</div>
+            <div class="box">LINK</div>
+          </div>
+        </div>
+
+        <div class="box">BODY
+          <div class="child">
+            <div class="box">H1</div>
+            <div class="box">INPUT</div>
+            <div class="box">BUTTON</div>
+            <div class="box">UL
+              <div class="child">
+                <div class="box">LI
+                  <div class="child">
+                    <div class="box">A</div>
+                  </div>
+                </div>
+                <div class="box">LI</div>
+                <div class="box">LI</div>
+              </div>
+            </div>
+            <div class="box">SCRIPT</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
