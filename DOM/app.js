@@ -135,3 +135,4 @@ for(let i=0;i<totalimage;i++)
 
 
 
+document.getElementsByTagName("p");
