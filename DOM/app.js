@@ -372,7 +372,23 @@ Solution.	Add CSS for #ironman or use class change
 
 
 
-let box_copy2=document.querySelector('.boxLink');
-let e=box_copy2.getAttribute(id);
+
+
 console.log(box_copy2);
 console.log(e);
+
+box_copy2.setAttribute('id','set_new_id');
+
+let box_copy2=document.querySelector('.boxLink');
+
+//box_copy2:   <a href="#" class="boxLink" >Publisher</a>
+
+
+let e=box_copy2.getAttribute('id');//null
+
+let e2=
+box_copy2.setAttribute('id','set_new_id');
+box_copy2.getAttribute('id');//'set_new_id'
+//box_copy2 :<a href=​"#" class=​"boxLink" id=​"set_new_id">​Publisher​</a>​
+
+
