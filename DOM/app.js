@@ -161,7 +161,62 @@ console.dir(document.querySelector('p'));//object form detailed of first paragra
 
 console.log(document.querySelector('img'));//Find the first <img> tag and show it in HTML form.
 
-console.dir(document.querySelector('img'));
+console.dir(document.querySelector('img'));//Find the first <img> tag and show it in js object  form.
 
 //log : shows element  as html 
 //dir: shows element as js object
+
+
+
+
+
+
+
+
+
+
+
+
+///////////////query selector all///////////////////////
+document.querySelectorAll('a');//Find all <a> tags (anchor/link elements) in the webpage.
+
+let all_link=document.querySelectorAll('a');
+
+//all_link can be think as array
+
+all_link.forEach(funcname7);
+
+function funcname7(e)
+{
+console.log(e.href);// only e will print full anchor tag html//<a href="https://google.com">Google</a>
+// e.href will print link. //https://google.com/
+}
+
+
+
+
+
+// all anchor tag/link inside paragraph
+
+let all_link_inside_paragraph2=document.querySelectorAll('p a');
+
+let n=all_link_inside_paragraph2.length;
+
+for(let i=0;i<n;i++)
+{
+    console.log(all_link_inside_paragraph2[i]);
+}
+
+
+
+for(let i of document.querySelectorAll('p a'))
+{
+    console.log(i);
+}
+
+
+
+
+//nth type
+
+console.log(document.querySelector('img:nth-of-type(2)'));
