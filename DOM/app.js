@@ -257,3 +257,12 @@ console.log(a3);
 
 let a4=document.querySelector('p').innerHTML;
 console.log(a4);
+
+
+
+
+let b2=document.querySelector('h1').innerText='change h1';
+
+b2='<h1>ironman</h1>';
+
+
