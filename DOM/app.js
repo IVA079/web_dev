@@ -220,3 +220,40 @@ for(let i of document.querySelectorAll('p a'))
 //nth type
 
 console.log(document.querySelector('img:nth-of-type(2)'));
+
+
+
+
+/**
+ *  What is querySelector?
+
+ querySelector is a JavaScript DOM method that lets you find (select) one element from your webpage using a CSS selector (like id, class, or tag).
+
+In simple words:
+
+It tells JavaScript:
+“Find the first element on this page that matches this CSS selector.”
+ */
+
+
+
+
+
+
+//////////////innetText/////////////////////////////////////
+let a2=document.querySelector('p').innerText;
+console.log(a2);
+
+
+
+
+
+let a3=document.querySelector('p').textContent;
+console.log(a3);
+
+
+
+
+
+let a4=document.querySelector('p').innerHTML;
+console.log(a4);
