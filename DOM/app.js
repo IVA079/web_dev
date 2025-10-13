@@ -335,6 +335,9 @@ document.querySelector('.boxLink').id;///''
 
 
 
+
+
+
 document.querySelector('.oldImg').className='changeoldImg';
 
 document.querySelector('#mainImg').id='change_mainImg';
@@ -345,3 +348,31 @@ let copyimg=document.querySelector('img');
 
 
 copyimg.setAttribute('id','ironman');
+
+/**
+ * index.html is just the original file stored on your computer.
+
+When your page runs, the browser creates a live copy of it in memory (called the DOM).
+
+Your JavaScript code changes that live copy — not the real file.
+
+What Happened	Why
+You changed id in JS	.Only affects browser memory (DOM)
+index.html didn’t change	.File isn’t rewritten by JS
+CSS stopped applying	.Because #ironman had no rule
+Solution.	Add CSS for #ironman or use class change
+
+
+ */
+
+
+
+
+
+
+
+
+let box_copy2=document.querySelector('.boxLink');
+let e=box_copy2.getAttribute(id);
+console.log(box_copy2);
+console.log(e);
