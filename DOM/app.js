@@ -248,7 +248,7 @@ console.log(a2);
 
 
 
-let a3=document.querySelector('p').textContent;
+let a3=document.querySelector('p').textContent;//hidden portion..space,new line
 console.log(a3);
 
 
@@ -265,4 +265,57 @@ let b2=document.querySelector('h1').innerText='change h1';
 
 b2='<h1>ironman</h1>';
 
+
+/**
+ * b2='<h1>ironman</h1>';
+'<h1>ironman</h1>'
+b2
+'<h1>ironman</h1>'//it is not showing only ironman.? so we need innerHTML
+ */
+
+
+
+
+document.querySelector('h1').innerHTML='<h1>modify</h1>';//now it will show modify not '<h1>modify</h1>'
+//innner html works with html code//change inner html code
+//inner text deal with string
+
+
+
+
+
+
+
+
+document.querySelector('h2').textContent;
+//'About'
+document.querySelector('h2').textContent='change text content';
+//'change text content'
+
+
+document.querySelector('h2').textContent;
+//'change text content'
+document.querySelector('h2').innerHTML;
+//'change text content'
+
+
+
+
+
+
+
+
+///////////////////////////Manipulating attributes/////////////////////////////////
+//Attributes are the extra information inside an HTML tag that describe its properties.
+
+
+/**
+ * Attribute Manipulation
+
+Means → 
+using JavaScript to get, set, add, or remove these HTML attributes dynamically.
+ */
+
+
+let img=document.querySelector('img');
 
