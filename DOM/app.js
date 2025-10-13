@@ -319,3 +319,29 @@ using JavaScript to get, set, add, or remove these HTML attributes dynamically.
 
 let img=document.querySelector('img');
 
+
+
+
+//practice
+
+
+let d=document.querySelector('#mainImg ');
+let d2=d.id;
+
+
+document.querySelector('.boxLink');
+document.querySelector('.boxLink').id;///''
+
+
+
+
+document.querySelector('.oldImg').className='changeoldImg';
+
+document.querySelector('#mainImg').id='change_mainImg';
+
+
+
+let copyimg=document.querySelector('img');
+
+
+copyimg.setAttribute('id','ironman');
