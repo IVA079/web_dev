@@ -392,3 +392,78 @@ box_copy2.getAttribute('id');//'set_new_id'
 //box_copy2 :<a href=​"#" class=​"boxLink" id=​"set_new_id">​Publisher​</a>​
 
 
+
+
+
+////////////Silkie Chicken///// source :wikipedia:https://en.wikipedia.org/wiki/Silkie
+
+
+
+ document.querySelectorAll('img')[1].src
+  
+'https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-wordmark-en.svg'
+
+document.querySelectorAll('img')[2].src
+
+'https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg'
+
+let img1st=document.querySelectorAll('img')[1].src;
+
+undefined
+
+img1stwithoutsrc=document.querySelectorAll('img')[1];
+
+
+
+//<img class=​"mw-logo-wordmark" alt=​"Wikipedia" src=​"/​static/​images/​mobile/​copyright/​wikipedia-wordmark-en.svg" style=​"width:​ 7.5em;​ height:​ 1.125em;​">​
+
+//img1stwithoutsrc.setAttribute('src','https://en.wikipedia.org/static/images/mobile/copyright/wikipedia-tagline-en.svg');
+
+ 
+
+
+
+
+
+
+/**
+ * document.querySelector('h1'0;
+VM1633:1 Uncaught SyntaxError: missing ) after argument listUnderstand this error
+document.querySelector('h1');
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​…​</h1>​
+let heading=document.querySelector('h1');
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​…​</h1>​
+VM1762:2 Uncaught SyntaxError: Unexpected token '<'Understand this error
+let heading=document.querySelector('h1');
+undefined
+heading
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading">​…​</h1>​
+heading.style.color='red';
+'red'
+heading.textContent
+'Silkie'
+heading.type
+undefined
+heading
+<h1 id=​"firstHeading" class=​"firstHeading mw-first-heading" style=​"color:​ red;​">​…​</h1>​
+document.querySelector('input');
+<input type=​"checkbox" id=​"vector-main-menu-dropdown-checkbox" role=​"button" aria-haspopup=​"true" data-event-name=​"ui.dropdown-vector-main-menu-dropdown" class=​"vector-dropdown-checkbox " aria-label=​"Main menu">​
+let input_copy=document.querySelector('input');
+undefined
+input
+VM2331:1 Uncaught ReferenceError: input is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2331:1Understand this error
+input_copy
+<input type=​"checkbox" id=​"vector-main-menu-dropdown-checkbox" role=​"button" aria-haspopup=​"true" data-event-name=​"ui.dropdown-vector-main-menu-dropdown" class=​"vector-dropdown-checkbox " aria-label=​"Main menu">​
+input_copy.style.color='blue';
+'blue'
+input_copy
+<input type=​"checkbox" id=​"vector-main-menu-dropdown-checkbox" role=​"button" aria-haspopup=​"true" data-event-name=​"ui.dropdown-vector-main-menu-dropdown" class=​"vector-dropdown-checkbox " aria-label=​"Main menu" style=​"color:​ blue;​">​
+input_copy.type
+'checkbox'
+input_copy.setAttribute('type','text');
+undefined
+input_copy
+<input type=​"text" id=​"vector-main-menu-dropdown-checkbox" role=​"button" aria-haspopup=​"true" data-event-name=​"ui.dropdown-vector-main-menu-dropdown" class=​"vector-dropdown-checkbox " aria-label=​"Main menu" style=​"color:​ blue;​">​
+ */
