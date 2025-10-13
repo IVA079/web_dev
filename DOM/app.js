@@ -136,3 +136,32 @@ for(let i=0;i<totalimage;i++)
 
 
 document.getElementsByTagName("p");
+
+
+
+
+
+
+///////////query selector///////////////////////////////////////////////
+
+document.querySelector('h1');//fins first h1 element
+
+document.querySelector('#red');//finds first element with id of red
+
+document.querySelector('.big');// find first element with class
+
+
+
+console.log(document.querySelector('a[href="https://www.google.com/search?q=Marvel+Comics"]'));
+//find the first <a> tag (link) where (link address) equals https://www.google.com/search?q=Marvel+Comics
+
+console.log(document.querySelector('p'));//find first paragraph tag in your web page
+
+console.dir(document.querySelector('p'));//object form detailed of first paragraph tag
+
+console.log(document.querySelector('img'));//Find the first <img> tag and show it in HTML form.
+
+console.dir(document.querySelector('img'));
+
+//log : shows element  as html 
+//dir: shows element as js object
