@@ -40,3 +40,29 @@ newDiv.appendChild(caption);
 // 6️⃣ Finally — attach <div> to the real page (after 3rd paragraph)
 let target = document.querySelectorAll('p')[2];
 target.after(newDiv);
+
+
+
+
+
+
+
+
+
+//////////////////Example 1 — appendChild():Adds new content to the end of a parent element.
+
+//prepent(element);
+
+let rose3=document.createElement('img');
+undefined
+rose3.src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Maria_Amelia_of_Braganza.jpg/330px-Maria_Amelia_of_Braganza.jpg"
+'https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Maria_Amelia_of_Braganza.jpg/330px-Maria_Amelia_of_Braganza.jpg'
+rose3.style.width="600";
+'600'
+rose3.style.display = "block";
+'block'
+rose3.style.margin = "10px auto";
+'10px auto'
+rose3.style.border = "3px solid purple";
+'3px solid purple'
+document.body.prepend(rose3);
