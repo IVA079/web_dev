@@ -45,6 +45,6 @@ It’s like an on/off switch for CSS classes
  */
 
 
-heading.classList.toggle('class_third');
+heading5.classList.toggle('class_third');
 
 
