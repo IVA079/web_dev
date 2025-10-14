@@ -40,7 +40,7 @@ let firstLink = document.querySelectorAll("a")[7];
 
 let childrenall=boldTag.children;
 
-let p2=document.querySelectorAll('p')[2];
+let p_last=document.querySelectorAll('p')[2];
 
 console.log(bold3.nextElementSibling);     
 //  <a href="#">Marvel Comics</a>
@@ -51,5 +51,5 @@ console.log(firstLink.previousElementSibling);
 console.log(firstLink.nextElementSibling);
 //  <a href="#">Amazing Fantasy</a>
 
-console.log(boldTag.previousElementSibling);
+console.log(bold3.previousElementSibling);
 //  null (no element before <b>)
