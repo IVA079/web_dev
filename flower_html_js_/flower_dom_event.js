@@ -117,3 +117,81 @@ submitBtn.onclick = function() {
   }
   commentBox.value = ""; // clear comment
 };
+
+
+
+
+
+
+
+/////on mouse enter:
+/**
+ * What is onmouseenter?
+
+The mouseenter event happens when your mouse cursor enters (touches) an element.
+It triggers only once when you move the cursor into that element.
+ */
+
+ let flowerTitle = document.getElementById("flowerTitle");
+
+  flowerTitle.onmouseenter = function() {
+    flowerTitle.style.color = "hotpink";
+    flowerTitle.textContent = "🌼 You hovered over the flower!";
+  };
+
+
+
+
+
+
+
+
+
+
+
+
+
+  /////////////keyboard event////////////////////
+  // Select input elements
+   let downCount = 0;
+    let upCount = 0;
+const nameInput2 = document.getElementById("name");
+const commentInput = document.getElementById("comment");
+const output = document.getElementById("p_for_output ");
+
+// 1️⃣ When a key is pressed down
+nameInput2.addEventListener("keydown", function(event) {
+console.log(  output.textContent = `🟣 keydown: You pressed "${event.key}"`);
+
+
+//console.log(downCount++);
+  output.style.color = "purple";
+});
+
+// 2️⃣ When a key that makes a letter/number is pressed (not used much now)
+//nameInput2.addEventListener("keypress", function(event) {
+  //output.textContent = `🔵 keypress: You typed "${event.key}"`;
+  //output.style.color = "blue";
+//});
+
+// 3️⃣ When the key is released
+//nameInput2.addEventListener("keyup", function(event) {
+  //console(output.textContent = `🟢 keyup: You released "${event.key}"`);
+  //console.log( upCount++);
+  //output.style.color = "green";
+//});
+
+
+
+
+// Optional: Trigger on comment box too
+commentInput.addEventListener("keydown", function(event) {
+  
+
+  console.log(output.textContent = `🟢 keyup: You released "${event.key}"`);
+  console.log( upCount++);
+
+
+  output.textContent = `✏️ You are typing in the comment box: "${event.key}"`;
+  output.style.color = "#b30059";
+});
