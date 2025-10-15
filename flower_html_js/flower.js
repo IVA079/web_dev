@@ -107,13 +107,13 @@ let nameInput = document.getElementById('name');
 let flowerType = document.getElementById('flowerType');
 let commentBox = document.getElementById('comment');
 let submitBtn = document.getElementById('submitBtn');
-let output = document.getElementById('output'); //
+
 
 submitBtn.onclick = function() {
   if (nameInput.value && flowerType.value) {
-    output.textContent = `Hello ${nameInput.value}! You love ${flowerType.value} because "${commentBox.value}". 🌸`;
+    p_out.textContent = `Hello ${nameInput.value}! You love ${flowerType.value} because "${commentBox.value}". 🌸`;
   } else {
-    output.textContent = "⚠️ Please fill in your name and choose a flower.";
+    p_out.textContent = "⚠️ Please fill in your name and choose a flower.";
   }
   commentBox.value = ""; // clear comment
 };
