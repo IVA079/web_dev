@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flowers — DOM Practice</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      line-height: 1.6;
+    }
+    .gallery {
+      display: flex;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .gallery img {
+      width: 200px;
+      height: auto;
+      cursor: pointer;
+      transition: transform 0.2s, border 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+    #mainImage {
+      width: 400px;
+      height: auto;
+      border: 3px solid #444;
+      margin-bottom: 20px;
+      display: block;
+    }
+    .highlight {
+      background-color: #ffffcc;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Beautiful Flowers Gallery</h1>
+
+  <p>Click on any flower image below to set it as the main image.</p>
+
+  <img id="mainImage"
+       src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg/800px-Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg"
+       alt="Featured Flower">
+
+  <div class="gallery">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg/400px-Leucanthemum_vulgare_%27Filigran%27_Flower_2200px.jpg"
+         alt="Flower 1" class="thumb">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/3/32/Flower-IMG_0314.JPG"
+         alt="Flower 2" class="thumb">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Dark_pink_cosmos_flower.jpg"
+         alt="Flower 3" class="thumb">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0d/Lotus_Flower_at_GSS.jpg"
+         alt="Flower 4" class="thumb">
+  </div>
+
+  <h2>About Flowers</h2>
+  <p id="flowerText">
+    Flowers are the reproductive structures found in flowering plants (angiosperms). They form seeds via the process of pollination and fertilization. Flowers vary widely in shape, color, scent, and size.
+  </p>
+
+  <h3>Parts of a Flower</h3>
+  <ul>
+    <li>Petals</li>
+    <li>Sepals</li>
+    <li>Stamens</li>
+    <li>Pistil (or Carpel)</li>
+    <li>Receptacle, Ovary, Style, Stigma</li>
+  </ul>
+
+  <h3>Interesting Facts</h3>
+  <p>
+    Some flowers open only at specific times of day. Some are pollinated by insects, others by wind. Flowers can also change color after pollination to deter repeat visits by pollinators.
+  </p>
+
+  <button id="toggleFactsBtn">Hide Facts</button>
+  <button id="highlightBtn">Highlight Description</button>
+
+  <script src="app.js"></script>
+</body>
+</html>
