@@ -195,3 +195,16 @@ commentInput.addEventListener("keydown", function(event) {
   output.textContent = `✏️ You are typing in the comment box: "${event.key}"`;
   output.style.color = "#b30059";
 });
+
+
+/**
+ * Press and hold any key (e.g. A) → see Key Down Count increase fast (repeats).
+
+When you release the key → see Key Up Count increase by 1.
+
+✅ So the real difference is:
+
+Event	Happens When	How Many Times
+keydown	You press the key	Many times (if you keep holding)
+keyup	You release the key	Once per key press
+ */
