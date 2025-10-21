@@ -130,8 +130,39 @@ setTimeout(
 
 
 
+function changecolor(color,delay)
+{
+    setTimeout(
+    ()=>
+    {
+        h1.style.color="color";
+    },delay
+);
+}
+
+
+changecolor("red",1000);
+changecolor("orange",2000);
+changecolor("green",3000);
 
 
 
+console.log("Nested callbacks.Hard to read — later we solve it using Promises")
 
+function changeColor(color, delay, nextColorChange) {
+  setTimeout(() => {
+    h1.style.color = color;
+    if (nextColorChange) nextColorChange();
+  }, delay);
+}
+
+
+
+changeColor("red", 1000, () => {
+  changeColor("orange", 1000, () => {
+    changeColor("green", 1000, () => {
+      changeColor("yellow", 1000);
+    });
+  });
+});
 
