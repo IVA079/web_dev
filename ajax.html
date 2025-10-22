@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AJAX Joke Generator</title>
+</head>
+<body style="font-family: Arial; text-align: center; margin-top: 50px;">
+  <h1>🤣 Random Joke Generator</h1>
+  <p id="joke">Click the button to load a joke!</p>
+  <button id="btn">Get Joke</button>
+
+  <script>
+    const btn = document.getElementById("btn");
+    const jokeElement = document.getElementById("joke");
+
+    btn.addEventListener("click", () => {
+      // 👇 This is an AJAX request using fetch()
+      fetch("https://official-joke-api.appspot.com/random_joke")
+        .then(response => response.json()) // Convert the response to JSON
+        .then(data => {
+          // Display the joke from the response
+          jokeElement.textContent = `${data.setup} 😂 ${data.punchline}`;
+        })
+        .catch(error => {
+          jokeElement.textContent = "Oops! Could not load a joke 😢";
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
