@@ -1,51 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌸 Flower Image GET & POST Example</title>
 
-     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-  
-  
+  <!-- Axios CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
 </head>
 <body>
-    
-    /////////////////////////////
-<h1>example 2 flower img</h1>
+  <h1>🌼 Flower Image GET & POST Example</h1>
 
-
-
-<h1>Flower Image GET & POST Example</h1>
-
-
-
-  <h1>🌸 Flower Image Viewer (Local Example)</h1>
-
-  
-  <!-- GET button -->
-  <button id="getBtn">Show Flower</button>
-
-  <br><br>
-
-  <img id="flowerImg" src="" width="300" alt="Flower will appear here">
-
+  <!-- Random local image -->
+  <button id="getBtn">Show Random Flower</button><br /><br />
+  <img id="flowerImg" src="" width="300" alt="Flower will appear here" />
   <p id="flowerName"></p>
 
+  <!-- Load one image via Axios -->
+  <h3>🌺 Load Local Flower via Axios</h3>
+  <button id="getImgBtn">Load Local Image (Axios GET)</button>
+  <p id="status"></p>
 
+  <!-- JSON GET -->
+  <h3>🌻 Get Flower Info (API)</h3>
+  <button id="getBtn2">Get Flower Info</button>
+  <pre id="output2">Click button to load flower info...</pre>
 
-
-  <!-- POST button -->
-  <h2>Submit Your Favorite Flower</h2>
-
-  <input type="text" id="favInput" placeholder="Enter flower name">
-
+  <!-- POST -->
+  <h3>🌷 Submit Your Favorite Flower</h3>
+  <input type="text" id="favInput" placeholder="Enter flower name" />
   <button id="postBtn">Send</button>
+  <pre id="output"></pre>
 
-  <p id="output"></p>
-
-
-
+  <!-- JS -->
   <script src="axios_imh_js.js"></script>
 </body>
 </html>
