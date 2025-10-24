@@ -96,7 +96,7 @@ async function sendPost() {
 
 
 
-
+///////////////////////get///////////////////////////////////////////////////////
     document.getElementById("getBtn").addEventListener("click", async () => {
   try {
     const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1");
@@ -106,3 +106,65 @@ async function sendPost() {
     console.log("❌ GET error:", err);
   }
 });
+
+
+
+
+
+
+
+
+
+
+
+/////////////flower imh api get post/////////////////////
+
+function getflow()
+{
+    let flowers=[{name:"lily",src:"flower_html_js_/image/Lily_Lilium_'Citronella'_Flower.jpg"},
+      {
+        name:"sunflower",src:"flower_html_js_/image/Sunflower_sky_backdrop.jpg"
+      }
+    ];
+    
+    let random=Math.floor(Math.random()*flowers.length);
+    let flower=flowers[random];
+
+
+     document.getElementById("flowerImg").src = flower.src;
+  document.getElementById("flowerName").textContent = "🌼 " + flower.name;
+}
+
+
+
+
+
+
+
+
+
+// /////////////////////////////🌻Function 2: Send favorite flower (POST)
+async function sendFavoriteFlower() {
+  const fav = document.getElementById("favInput").value.trim();
+  const output = document.getElementById("output");
+
+  if (!fav) {
+    output.textContent = " Please enter a flower name!";
+    return;
+  }
+
+  try {
+    const res = await axios.post("https://jsonplaceholder.typicode.com/posts", {
+      favorite: fav,
+      date: new Date().toLocaleString()
+    });
+
+    output.textContent = "✅ Sent Successfully!\n\n" + JSON.stringify(res.data, null, 2);
+  } catch (error) {
+    output.textContent = "❌ Error: " + error;
+  }
+}
+
+// 🎯 Buttons
+document.getElementById("getBtn").addEventListener("click", getflow);
+document.getElementById("postBtn").addEventListener("click", sendFavoriteFlower);
