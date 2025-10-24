@@ -58,3 +58,52 @@ The second argument → is the data you’re sending (newPost)
  */
 
 
+
+
+
+
+
+
+
+
+
+
+// app.js
+
+// ✅Select button and  paragraph's output area
+const btn = document.getElementById("getBtn");
+const output = document.getElementById("output");
+
+//  Async function to fetch data
+async function getCharacter() {
+  try {
+    // 1️⃣ Make GET request
+    const res = await axios.get("https://swapi.dev/api/people/1/");
+
+    // 2️⃣ Display result on the page
+    output.textContent = JSON.stringify(res.data, null, 2);
+
+    console.log("✅ Data received:", res.data);
+  } 
+  catch (error) {
+    // 3️⃣ Handle error
+    output.textContent = "❌ Error fetching data!";
+    console.log("Error:", error);
+  }
+}
+
+// ✅Add click event
+btn.addEventListener("click", getCharacter);
+
+
+/**
+ * You open index.html in a browser.
+
+You click the “Get Character” button.
+
+It calls the getCharacter() function in app.js.
+
+Axios sends a GET request to https://swapi.dev/api/people/1/.
+
+You see the Star Wars character data (e.g., Luke Skywalker) printed on screen.
+ */
