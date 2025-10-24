@@ -68,42 +68,41 @@ The second argument → is the data you’re sending (newPost)
 
 
 
-// app.js
+/////////////////////post//////////////////////////////////////
+async function sendPost() {
+      try {
+        // 1️⃣ Prepare the data you want to send
+        const newPost = {
+          title: "Learning Axios",
+          body: "Axios with await is so clean!",
+          userId: 1
+        };
 
-// ✅Select button and  paragraph's output area
-const btn = document.getElementById("getBtn");
-const output = document.getElementById("output");
+        // 2️⃣ Send the POST request and wait for the response
+        const res = await axios.post("https://jsonplaceholder.typicode.com/posts", newPost);
 
-//  Async function to fetch data
-async function getCharacter() {
+        // 3️⃣ Once done, show the response
+        console.log("✅ Post created successfully:");
+        console.log(res.data);
+
+      } catch (error) {
+        // 4️⃣ Handle errors
+        console.log("❌ Something went wrong:", error);
+      }
+    }
+
+    // When button is clicked, call the async function
+    document.getElementById("postBtn").addEventListener("click", sendPost);
+
+
+
+
+    document.getElementById("getBtn").addEventListener("click", async () => {
   try {
-    // 1️⃣ Make GET request
-    const res = await axios.get("https://swapi.dev/api/people/1/");
-
-    // 2️⃣ Display result on the page
-    output.textContent = JSON.stringify(res.data, null, 2);
-
-    console.log("✅ Data received:", res.data);
-  } 
-  catch (error) {
-    // 3️⃣ Handle error
-    output.textContent = "❌ Error fetching data!";
-    console.log("Error:", error);
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts/1");
+    document.getElementById("output").textContent = JSON.stringify(res.data, null, 2);
+    console.log("✅ GET success:", res.data);
+  } catch (err) {
+    console.log("❌ GET error:", err);
   }
-}
-
-// ✅Add click event
-btn.addEventListener("click", getCharacter);
-
-
-/**
- * You open index.html in a browser.
-
-You click the “Get Character” button.
-
-It calls the getCharacter() function in app.js.
-
-Axios sends a GET request to https://swapi.dev/api/people/1/.
-
-You see the Star Wars character data (e.g., Luke Skywalker) printed on screen.
- */
+});
