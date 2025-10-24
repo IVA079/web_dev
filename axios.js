@@ -33,23 +33,17 @@ createUser();
 console.log("ex 2");
 
 
-async function createUser2() {
-  try {
-    axios.post("https://example.com/api/data",
-  { name: "Eva" },
-  {
-    headers: {
-      "Content-Type": "application/json",
-      "Authorization": "Bearer token123"
-    }
-  }
-);
-  } catch (err) {
-    console.log("Error:", err);
-  }
+async function createPost() {
+  const newPost = {
+    title: "Axios Makes Life Easy",
+    body: "No more JSON parsing!",
+    userId: 7
+  };
+
+  const res = await axios.post("https://jsonplaceholder.typicode.com/posts", newPost);
+  console.log("📝 New Post:", res.data);
 }
 
-createUser2();
-
+createPost();
 
 
