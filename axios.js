@@ -8,7 +8,7 @@ Method: Uses HTTP POST.
 Format: Automatically converts JavaScript objects to JSON before sending.
  */
 
-
+console.log("ex 1");
 
 async function createUser() {
   try {
@@ -23,3 +23,33 @@ async function createUser() {
 }
 
 createUser();
+
+
+
+
+
+
+
+console.log("ex 2");
+
+
+async function createUser2() {
+  try {
+    axios.post("https://example.com/api/data",
+  { name: "Eva" },
+  {
+    headers: {
+      "Content-Type": "application/json",
+      "Authorization": "Bearer token123"
+    }
+  }
+);
+  } catch (err) {
+    console.log("Error:", err);
+  }
+}
+
+createUser2();
+
+
+
