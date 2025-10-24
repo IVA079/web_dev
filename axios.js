@@ -47,3 +47,14 @@ async function createPost() {
 createPost();
 
 
+/**
+ * axios.post() sends data to a URL.
+
+The first argument → is the endpoint (https://jsonplaceholder.typicode.com/posts)
+
+The second argument → is the data you’re sending (newPost)
+
+⚙️ Axios automatically converts your object to JSON and sends it.
+ */
+
+

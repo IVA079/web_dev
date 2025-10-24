@@ -1,14 +1,47 @@
+
+
+
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <title>Axios POST Example</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
   
   <script src="axios.js"></script>
 
+  
+</head>
+<body>
+  <button id="postBtn">Send Post</button>
+
+  <script>
+    // ✅ async function lets us use 'await'
+    async function sendPost() {
+      try {
+        // 1️⃣ Prepare the data you want to send
+        const newPost = {
+          title: "Learning Axios",
+          body: "Axios with await is so clean!",
+          userId: 1
+        };
+
+        // 2️⃣ Send the POST request and wait for the response
+        const res = await axios.post("https://jsonplaceholder.typicode.com/posts", newPost);
+
+        // 3️⃣ Once done, show the response
+        console.log("✅ Post created successfully:");
+        console.log(res.data);
+
+      } catch (error) {
+        // 4️⃣ Handle errors
+        console.log("❌ Something went wrong:", error);
+      }
+    }
+
+    // When button is clicked, call the async function
+    document.getElementById("postBtn").addEventListener("click", sendPost);
+  </script>
 </body>
 </html>
