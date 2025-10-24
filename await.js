@@ -5,4 +5,20 @@ fetch("https://swapi.tech/api/people/1/")
 console.log("End");
 
 //it stops only the lines inside that async function after the await.
-I//t does not stop other functions or parts of your program.
+//it does not stop other functions or parts of your program.
+
+
+
+
+
+console.log("Line 1");
+
+async function test() {
+  console.log("Line 2");
+  await fetch("https://swapi.tech/api/people/1/"); // Line 3
+  console.log("Line 4");
+}
+
+test();
+
+console.log("Line 5");
