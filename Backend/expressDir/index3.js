@@ -25,3 +25,23 @@ app.listen(port,()=>
 {
     console.log(`app is listening on port ${port}`);
 })
+
+
+/**
+ * open your browser and go to:
+
+http://localhost:3000
+
+
+You’ll see:
+
+Cannot GET /
+
+
+That means:
+
+The server is working
+
+But there’s no route defined yet for /
+(so Express returns a default 404 error).
+ */
