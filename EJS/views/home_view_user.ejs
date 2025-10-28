@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html> 
+  <head>
+    <title><%= user.name %>'s Profile</title>
+  </head>
+  <body>
+    <h1>👋 Welcome, <%= user.name %>!</h1>
+    <p>Age: <%= user.age %></p>
+
+    <h3>Your Hobbies:</h3>
+
+    <ul>
+      <% user.hobbies.forEach(function(hobby) { %>
+        <li><%= hobby %></li>
+      <% }); %>
+    </ul>
+
+    <p>Total hobbies: <%= user.hobbies.length %></p>
+
+    <hr>
+    <p><a href="/">Go Home</a></p>
+  </body>
+</html>
