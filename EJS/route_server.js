@@ -15,7 +15,7 @@ let port=5441;
  * If the client sends data (like from a <form>), convert that form data into a JavaScript object, so I (Express) can understand it.”
  */
 
-//req.body = { name: "Eva", email: "eva@gmail.com" }
+//req.body = { name: "iva", email: "iva@gmail.com" }
 //let { name, email } = req.body;
 
 app.use(express.urlencoded({extended:true}));
