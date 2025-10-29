@@ -8,7 +8,7 @@ So now, figlet is an object that contains functions (methods) that the package p
 figlet variable:
 The object containing all the exported functions (method)
 
-
+//When you call require("figlet"), Node.js loads the figlet module from your node_modules folder and returns whatever that module exports.
 
 */
 

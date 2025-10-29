@@ -1,0 +1,22 @@
+<%- include('include/head') %>
+<%- include('include/navbar') %>
+
+<div class="container text-center mt-4">
+  <h2>@<%= data.name %></h2>
+  <p>Followers: <%= data.followers %> | Following: <%= data.following %></p>
+
+  <div class="row mt-4">
+    <% data.posts.forEach(post => { %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm">
+          <img src="<%= post.image %>" class="card-img-top" alt="Post image">
+          <div class="card-body">
+            ❤️ <%= post.likes %> Likes | 💬 <%= post.comments %> Comments
+          </div>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
+
+<%- include('include/footer') %>
