@@ -13,7 +13,7 @@ app.set("view engine","ejs");//Tell Express to use EJS templates
 app.set("views",path.join(__dirname,"views"));//Tell Express where your EJS files are stored
 
 
-app.set(express.static(path.join(__dirname,"public")));//for css,JS ,image static file
+app.use(express.static(path.join(__dirname,"public")));//for css,JS ,image static file
 
 app.use(express.urlencoded({extended: true}));//if user fill a login form ,then convert this data json format ,easy to see. mainly , converts form data into JSON-like object
 
@@ -21,11 +21,55 @@ app.use(express.urlencoded({extended: true}));//if user fill a login form ,then 
 app.listen(port,()=>
 {
     console.log(`listening at port :${port}`);
-})
+});
 
 app.get("/",(req,res)=>
 {
     res.send("hi");
+});
+
+
+
+
+let posts = [
+  { id: 1, username: "college", content: "coding" },
+  { id: 2, username: "tima", content: "working" },
+  { id: 3, username: "eva", content: "learning REST" },
+];
+
+
+
+
+
+
+
+
+
+/**
+app.get("/posts",(req,res)=>
+{
+res.json(posts);//res.send()
 })
+**/
 
 
+//why res.render() instead of  res.json(posts) and  es.send(): beacuse we do not want raw data ,text
+//we want to display the data in a beautiful, formatted HTML page. for this  we will use ejs template 
+//res.render():full HTML page (via EJS)
+
+
+
+/**
+ * res.render() → loads and displays EJS templates (HTML pages).
+public/ folder → stores CSS, JS, and images that your EJS pages use for color and style.
+ */
+
+
+
+/////////// 1st api:to get data for all posts//////////////////
+
+
+app.get("/posts",(req,res)=>
+{
+    res.render("post",{posts});
+});
