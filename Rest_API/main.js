@@ -8,6 +8,7 @@ let port=7423;
 
 let path=require("path");
 
+const{v4:uuidv4}=require('uuid');
 
 app.set("view engine","ejs");//Tell Express to use EJS templates
 app.set("views",path.join(__dirname,"views"));//Tell Express where your EJS files are stored
@@ -32,10 +33,12 @@ app.get("/",(req,res)=>
 
 
 let posts = [
-  { id: 1, username: "college", content: "coding" },
-  { id: 2, username: "tima", content: "working" },
-  { id: 3, username: "eva", content: "learning REST" },
+  { id: uuidv4()
+    , username: "college", content: "coding" },
+  { id: uuidv4(), username: "tima", content: "working" },
+  { id: uuidv4(), username: "eva", content: "learning REST" },
 ];
+
 
 
 
@@ -90,8 +93,9 @@ app.post("/posts",(req,res)=>
      // Step 1: Destructure form dataconsole.log(req.body);
      let {username,content}=req.body;
 
-
+let id=uuidv4();
     let newpost={
+        id:id,
         username:username,
         content:content
     };
