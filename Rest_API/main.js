@@ -141,7 +141,7 @@ You create a new post and push it into your posts array
 app.get("/posts/:id",(req,res)=>
 {
    let {id} =req.params;
- id =parseInt(id);
+//id =parseInt(id);
 let post;
 for (let i = 0; i < posts.length; i++) {
   if (posts[i].id === id) {
@@ -154,6 +154,38 @@ for (let i = 0; i < posts.length; i++) {
 res.render("show.ejs",{post});
 
 //res.send(`Username: ${post.username}, Content: ${post.content}`);
+
+
+})
+
+
+
+
+
+
+
+
+//////////////////4th api: update/////////////
+app.patch('/posts/:id',(req,res)=>
+{
+    let {id}=req.params;
+   // id=parseInt(id);
+
+    let newcontent=req.body.content;
+
+    let findpost;
+
+    for(let i=0;i<posts.length;i++)
+    {
+if(posts[i].id===id)
+{
+    findpost=posts[i];
+    break;
+}
+    }
+
+findpost.content=newcontent;
+
 
 
 })
