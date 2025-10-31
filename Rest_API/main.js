@@ -10,6 +10,10 @@ let path=require("path");
 
 const{v4:uuidv4}=require('uuid');
 
+let method_override=require('method-override');
+app.use(method_override('_method'));
+
+
 app.set("view engine","ejs");//Tell Express to use EJS templates
 app.set("views",path.join(__dirname,"views"));//Tell Express where your EJS files are stored
 
@@ -166,6 +170,9 @@ res.render("show.ejs",{post});
 
 
 //////////////////4th api: update/////////////
+
+
+
 app.patch('/posts/:id',(req,res)=>
 {
     let {id}=req.params;
@@ -187,5 +194,33 @@ if(posts[i].id===id)
 findpost.content=newcontent;
 
 
+res.redirect(`/posts/${id}`);
 
 })
+
+
+
+
+
+//////////edit////////////////////////
+app.get("/posts/:id/edit",(req,res)=>
+{
+    let {id}=req.params;
+
+    let findpost;
+
+    for(let i=0;i<posts.length;i++)
+    {
+if(posts[i].id===id)
+{
+    findpost=posts[i];
+    break;
+}
+    }
+
+    res.render("edit.ejs",{post:findpost});
+    
+})
+
+
+
