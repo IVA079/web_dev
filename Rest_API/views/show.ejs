@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= post.username %>'s Post</title>
+  <link rel="stylesheet" href="/show_style.css">
+</head>
+<body>
+  <div class="show-container">
+    <h1>🌈 <%= post.username %>'s Post</h1>
+
+    <div class="post-card">
+      <h2>💬 Post Content</h2>
+      <p><%= post.content %></p>
+    </div>
+
+    <a href="/posts" class="back-link">⬅️ Back to All Posts</a>
+  </div>
+</body>
+</html>

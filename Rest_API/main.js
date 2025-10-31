@@ -126,3 +126,30 @@ You create a new post and push it into your posts array
 
 
 
+
+
+//////////////3rd api:show/////////////////////////////
+
+///////////show specific post by id///////////////////////
+
+
+
+app.get("/posts/:id",(req,res)=>
+{
+   let {id} =req.params;
+ id =parseInt(id);
+let post;
+for (let i = 0; i < posts.length; i++) {
+  if (posts[i].id === id) {
+    post = posts[i];
+    break; // stop when we find the match
+  }
+}
+
+
+res.render("show.ejs",{post});
+
+//res.send(`Username: ${post.username}, Content: ${post.content}`);
+
+
+})

@@ -1,0 +1,65 @@
+/* 🌈 Background gradient for beauty */
+body {
+  background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* 🧁 Main container */
+.show-container {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  width: 400px;
+  text-align: center;
+}
+
+/* 🧠 Title */
+.show-container h1 {
+  color: #333;
+  font-size: 1.8em;
+  margin-bottom: 20px;
+}
+
+/* 💌 Post card */
+.post-card {
+  background-color: #fafafa;
+  border-left: 6px solid #ff9a76;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: transform 0.3s;
+}
+
+.post-card:hover {
+  transform: scale(1.03);
+}
+
+.post-card h2 {
+  color: #ff7b54;
+  margin-bottom: 10px;
+}
+
+.post-card p {
+  color: #555;
+  font-size: 1.1em;
+  line-height: 1.4;
+}
+
+/* 🔗 Back link */
+.back-link {
+  display: inline-block;
+  text-decoration: none;
+  color: #ff7b54;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.back-link:hover {
+  color: #ff512f;
+}
