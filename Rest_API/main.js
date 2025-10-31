@@ -73,3 +73,47 @@ app.get("/posts",(req,res)=>
 {
     res.render("post",{posts});
 });
+
+
+//////////2nd api: crete new post/////////////////////
+app.get("/posts/new",(req,res)=>
+{
+    res.render("form_fill_up.ejs");
+});
+
+
+
+
+
+app.post("/posts",(req,res)=>
+{
+     // Step 1: Destructure form dataconsole.log(req.body);
+     let {username,content}=req.body;
+
+
+    let newpost={
+        username:username,
+        content:content
+    };
+
+
+    console.log(newpost);
+
+ posts.push(newpost);
+
+})
+
+
+//Create a new post in the /posts  url. collection
+
+/**
+ * when you click “Post Now”:
+
+The browser sends a POST request to /posts
+
+Express runs your app.post("/posts") route
+
+You access the submitted data using req.body
+
+You create a new post and push it into your posts array
+ */

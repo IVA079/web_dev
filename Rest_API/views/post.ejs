@@ -4,15 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>All Posts</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 <body>
-  <h1>All Posts</h1>
+  <h1>🌟 All Posts 🌟</h1>
 
-  <% for (let post of posts) { %>
-    <div>
-      <h3><%= post.username %></h3>
-      <p><%= post.content %></p>
-    </div>
-  <% } %>
+  <div class="container">
+    <% for (let post of posts) { %>
+      <div class="post-card">
+        <h3>@<%= post.username %></h3>
+        <p><%= post.content %></p>
+      </div>
+    <% } %>
+  </div>
 </body>
 </html>
