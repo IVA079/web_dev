@@ -101,6 +101,8 @@ app.post("/posts",(req,res)=>
 
  posts.push(newpost);
 
+ res.redirect("/posts");
+
 })
 
 
@@ -117,3 +119,10 @@ You access the submitted data using req.body
 
 You create a new post and push it into your posts array
  */
+
+
+
+
+
+
+
