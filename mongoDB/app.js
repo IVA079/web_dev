@@ -49,9 +49,28 @@ console.log("err"+err);
 main();
 
 
+/**
+ * await mongoose.connect("mongodb://127.0.0.1:27017/movieApp");
+this connects your JavaScript file (Node.js) with your MongoDB database.
 
+
+ */
 
 
 
 
 //////////////schema//////////////////////////////
+
+let userSchema=new mongoose.Schema(
+    {
+        name:String,
+        email:String,
+        age:Number,
+    }
+);
+
+///////////model////////////////////////////
+
+let user=mongoose.model("User",userSchema);
+
+
