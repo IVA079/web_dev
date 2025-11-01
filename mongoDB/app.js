@@ -122,4 +122,108 @@ let movie1=new movie(
 );
 
 movie1.save();
+
+
+
+
+
+
+let user2=new user(
+    {
+        name:"adsd",
+        email:"zxzxzx",
+        age:32
+    }
+);
+
+
+async function user_creation()
+{
+try{
+    await user2.save()
+    console.log("ok")
+}
+
+
+
+catch(err)
+{
+    console.log("error");
+    console.log(err);
+}
+
+
+
+
+}
+user_creation();
  
+
+
+//////////////////// CREATE MULTIPLE USERS ////////////////////
+async function createUsers() {
+  try {
+    // Array of 10 users
+    const users = [
+      { name: "iva", email: "iva@gmail.com", age: 21 },
+      { name: "Maya", email: "maya@gmail.com", age: 25 },
+      { name: "Liam", email: "liam@gmail.com", age: 30 },
+      { name: "Sophia", email: "sophia@gmail.com", age: 27 },
+      { name: "Noah", email: "noah@gmail.com", age: 19 },
+      { name: "Olivia", email: "olivia@gmail.com", age: 22 },
+      { name: "Ava", email: "ava@gmail.com", age: 35 },
+      { name: "Mason", email: "mason@gmail.com", age: 40 },
+      { name: "Emma", email: "emma@gmail.com", age: 29 },
+      { name: "Lucas", email: "lucas@gmail.com", age: 33 }
+    ];
+
+    // Insert all at once
+    await user.insertMany(users);
+    console.log("🎉 10 Users Created Successfully!");
+  } catch (err) {
+    console.log(" Error while inserting users:");
+    console.log(err);
+  }
+}
+
+async function runAll() {
+  await createUsers(); // create first
+  
+}
+
+runAll();
+
+
+
+/////////////////////////find user/////////////////
+async function findusers()
+{
+    try{
+let findAllusers= await user.find();
+
+console.log(findAllusers);
+
+
+
+let findOneuser= await user.findOne(
+    {
+        name:"iva"
+    }
+);
+console.log(findOneuser);
+
+
+let findgt=await user.find({age:{$gt:40}});
+
+console.log(findgt);
+
+    }
+    catch(err)
+    {
+console.log(err);
+    }
+}
+
+
+
+findusers();
