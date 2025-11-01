@@ -74,3 +74,52 @@ let userSchema=new mongoose.Schema(
 let user=mongoose.model("User",userSchema);
 
 
+/**
+ * const Movie = mongoose.model("Movie", movieSchema);  // → uses "movies" collection
+const Student = mongoose.model("Student", studentSchema); // → uses "students" collection
+const Book = mongoose.model("Book", bookSchema); // → uses "books" collection
+So each model name = one collection (table).
+But writing the same model name again does not duplicate it.
+
+
+ */
+
+
+
+
+
+
+/////////////////////Inserting//////////////////////////////////
+
+let user1=new user(
+    {
+        name:"iva",
+        email:"abf@gmail.com",
+        age:67
+    }
+);
+
+
+
+
+let movieSchema=new mongoose.Schema(
+    {
+        title:String,
+        year:Number,
+        rating:String
+    }
+);
+
+let movie=mongoose.model('movie',movieSchema);
+
+
+let movie1=new movie(
+    {
+        title:"qwqew",
+        year:7888,
+        rating:"qww"
+    }
+);
+
+movie1.save();
+ 
