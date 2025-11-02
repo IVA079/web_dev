@@ -25,16 +25,25 @@
             <th>From</th>
             <th>Message</th>
             <th>To</th>
-            <th>   date:</th>
+            <th>   time:</th>
+            <th> date format</th>
           </tr>
         </thead>
         <tbody>
           <% for (let i = 0; i < chats.length; i++) { %>
             <tr>
+
+
               <td><%= chats[i].from %></td>
               <td class="msg"><%= chats[i].msg %></td>
               <td><%= chats[i].to %></td>
-              <td><%= chats[i].create_at.toString().split(" ") %>                </td>
+              <td><%= chats[i].create_at.toString().split(" ")[4] %> </td>
+            <td>
+             <%= chats[i].create_at.toString().split(" ").slice(0,4).join(" ") %>
+            </td>
+
+
+
             </tr>
           <% } %>
         </tbody>
