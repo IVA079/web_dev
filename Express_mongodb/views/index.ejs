@@ -13,6 +13,9 @@
       <h1>💬 All Chats</h1>
       <p class="subtitle">Beautifully displayed chat history ✨</p>
       <a href="/chats/new" class="new-chat-btn">➕ New Chat</a>
+       
+
+
     </header>
 
     <main class="container">
@@ -22,6 +25,7 @@
             <th>From</th>
             <th>Message</th>
             <th>To</th>
+            <th>   date:</th>
           </tr>
         </thead>
         <tbody>
@@ -30,6 +34,7 @@
               <td><%= chats[i].from %></td>
               <td class="msg"><%= chats[i].msg %></td>
               <td><%= chats[i].to %></td>
+              <td><%= chats[i].create_at.toString().split(" ") %>                </td>
             </tr>
           <% } %>
         </tbody>

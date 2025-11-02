@@ -100,6 +100,7 @@ app.get("/chats",async(req,res)=>
 {
     try{
    let chats= await chat.find();
+   
    console.log("get all gata");
    res.render("index.ejs",{chats});
     }
@@ -121,6 +122,7 @@ app.get("/chats/new",(req,res)=>
 
 
 app.use(express.urlencoded({extended:true}));
+
 app.post("/chats",async(req,res)=>
 {
    
