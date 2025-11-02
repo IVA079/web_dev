@@ -118,3 +118,37 @@ app.get("/chats/new",(req,res)=>
 {
     res.render("new_chat.ejs");
 })
+
+
+app.use(express.urlencoded({extended:true}));
+app.post("/chats",async(req,res)=>
+{
+   
+
+    try{
+    let {from ,to,msg}=req.body;
+     let newChat=new chat(
+        {
+            from:from,
+        to:to,
+         msg:msg,
+         create_at:new Date()
+
+        }
+     );
+
+
+     await newChat.save();
+
+     console.log("added chat successfully");
+     res.redirect("/chats");
+
+
+    }
+    catch(err)
+    {
+console.log(err);
+
+    }
+})
+
