@@ -6,7 +6,7 @@ let express=require('express');
 let app=express();
 
 let path=require('path');
-
+app.use(express.static(path.join(__dirname,"public")));//for css,JS ,image static file
 
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
@@ -29,29 +29,10 @@ let chat=require("./models/chat.js");
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 async function main()
 {
     try{
+        
 await mongoose.connect("mongodb://127.0.0.1:27017/ChatApp");
 
 console.log("get connected")
@@ -107,3 +88,20 @@ catch(err)
 
 }
 user_creation();
+
+
+
+/////////get all chats//////////////////////
+
+app.get("/chats",async(req,res)=>
+{
+    try{
+   let chats= await chat.find();
+   console.log("get all gata");
+   res.render("index.ejs",{chats});
+    }
+    catch(err)
+    {
+console.log("fail");
+    }
+})
