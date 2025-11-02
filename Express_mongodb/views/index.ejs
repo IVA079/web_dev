@@ -7,15 +7,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>💌 Chat Messages</h1>
+    <header>
+      <h1>💌 Chat Messages</h1>
+      <p class="subtitle">✨ View all your colorful conversations ✨</p>
+    </header>
 
-    <table>
+    <table class="chat-table">
       <thead>
         <tr>
-          <th>From</th>
-          <th>To</th>
-          <th>Message</th>
-          <th>Created At</th>
+          <th>From 💁‍♂️</th>
+          <th>To 💁‍♀️</th>
+          <th>Message 💬</th>
+          <th>Time ⏰</th>
         </tr>
       </thead>
       <tbody>
@@ -23,12 +26,16 @@
           <tr>
             <td><%= chat.from %></td>
             <td><%= chat.to %></td>
-            <td><%= chat.msg %></td>
+            <td class="msg"><%= chat.msg %></td>
             <td><%= chat.create_at.toLocaleString() %></td>
           </tr>
         <% }) %>
       </tbody>
     </table>
   </div>
+
+  <footer>
+    <p>💖 Made with love and Express + MongoDB 💖</p>
+  </footer>
 </body>
 </html>
