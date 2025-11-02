@@ -6,7 +6,10 @@ let express=require('express');
 let app=express();
 
 let path=require('path');
-app.use(express.static(path.join(__dirname,"public")));//for css,JS ,image static file
+
+app.use(express.static(path.join(__dirname,"public")));
+
+
 
 app.set('views',path.join(__dirname,'views'));
 app.set('view engine','ejs');
@@ -104,4 +107,14 @@ app.get("/chats",async(req,res)=>
     {
 console.log("fail");
     }
+})
+
+
+
+
+
+//////////new and create/////////////////////////
+app.get("/chats/new",(req,res)=>
+{
+    res.render("new_chat.ejs");
 })
