@@ -13,11 +13,7 @@
 
 
 
-<form>
-
-
-</form>
-
+<form method="post" action="/chats/<%= chat_to_edit._id %>?_method=put">
 <textarea name="msg" rows="10" cols="10">
     <%= chat_to_edit.msg %>
 
@@ -26,6 +22,10 @@
 <button>
     submit
 </button>
+
+</form>
+
+
    </div>
 
 
