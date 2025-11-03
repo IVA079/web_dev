@@ -207,3 +207,45 @@ app.put("/chats/:id", async (req, res) => {
 
 
 })
+
+/**
+ * When you write
+let { msg } = req.body;
+
+
+it means exactly this:
+
+let msg = req.body.msg;
+
+
+So —
+if your form sends:
+
+<textarea name="msg">Hello</textarea>
+
+
+then inside Express:
+
+req.body = { msg: "Hello" }
+
+
+✅ So msg will contain "Hello"
+✅ It will work perfectly
+
+🧠 Let’s compare all 3 versions side by side
+Code	What it means	Works if your form field is name="msg"?
+let { msg } = req.body;	take msg → make variable also named msg	✅ Works
+let { msg: newms } = req.body;	take msg → rename it to newms	✅ Works
+let { newms } = req.body;	take newms → make variable newms	❌ Fails (form doesn’t have that field)
+✅ Best practice (simple and clear)
+
+In your case, since your form uses:
+
+<textarea name="msg">
+
+
+just do:
+
+let { msg } = req.body;
+await chat.findByIdAndUpdate(id, { msg }, { runValidators: true, new: true });
+ */
