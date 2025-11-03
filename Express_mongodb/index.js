@@ -175,4 +175,21 @@ res.render("edit_chat.ejs",{chat_to_edit});
     {
 res.send("error");
     }
+});
+
+
+
+
+//after clickin on submit ,a put req will be gone to server
+//how server handle this putreq?
+
+app.put("/chats/:id",(req,res)=>
+{
+let (id)=req.params.id;
+
+let {newms}=req.body;
+let updatedchat=chat.findByIdAndUpdate(id,{msg:newms});
+
+
+
 })
