@@ -100,7 +100,7 @@ app.get("/chats",async(req,res)=>
 {
     try{
    let chats= await chat.find();
-   
+
    console.log("get all gata");
    res.render("index.ejs",{chats});
     }
@@ -152,5 +152,27 @@ app.post("/chats",async(req,res)=>
 console.log(err);
 
     }
-})
+});
 
+
+
+
+
+////////////update route////////////////////////////
+
+
+app.get("/chats/:id/edit",async(req,res)=>
+{
+    try{
+let {id}=req.params;
+
+let chat_to_edit=await chat.findById(id);
+
+res.render("edit_chat.ejs",{chat_to_edit});
+
+    }
+    catch(err)
+    {
+res.send("error");
+    }
+})

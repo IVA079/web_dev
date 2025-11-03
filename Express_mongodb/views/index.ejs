@@ -42,8 +42,20 @@
              <%= chats[i].create_at.toString().split(" ").slice(0,4).join(" ") %>
             </td>
 
+<td>
+    <a href="/chats/<%= chats[i]._id %>/edit " class="edit"> edit</a>
+</td>
 
 
+<td>
+
+
+    <form method="get" action="/chats/<%= chats[i]._id %>/edit">
+<button class="edit-btn">
+    edit button
+</button>
+    </form>
+</td>
             </tr>
           <% } %>
         </tbody>
