@@ -10,10 +10,15 @@ import ColorLiset from './Passing_array';
 
 import ColorList from './ColorList';
 
+import Rendering from './Rendering_array';
+
 
 function App() {
    let colorArray = ["Red", "Green", "Blue", "Pink"];
    let colorObject={r:"Red", g:"Green", b:"Blue", p:"Pink"};
+   let options=[<li>"blue</li>,<li>"red</li>];
+
+
   return (
     <div>
       <h1>Component 1</h1>
@@ -27,12 +32,15 @@ function App() {
         <Die/>
 
 
-     <ColorLiset colors={colorArray} colors2={colorObject}/>
+     <ColorLiset colors={colorArray} colors2={colorObject.r}/>
 
    
 
 
-     <ColorList colors={colorArray}/>
+    <Rendering features={options}/>
+
+
+
 
     </div>
   );
