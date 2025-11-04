@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg';
 import './App.css';
 import Greeting from './Greeting';
 import Passing from './passing_multiple_props';
+import Die from './default_props';
 
 function App() {
   return (
@@ -12,7 +13,11 @@ function App() {
     
         <Greeting person="alison" />
 
-        <Passing  person="tima" from="elon"/>
+        <Passing person="tima" from="elon"/>
+
+        <Die  num={20}   />
+
+        <Die/>
 
     </div>
   );
