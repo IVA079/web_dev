@@ -1,12 +1,14 @@
-function ColorLiset({colors})
+function ColorLiset({colors,colors2})
 {
 return (
 
     <div>
 
         <h3> my fav colors:</h3>
-       
-       {colors}
+       <p>{colors}</p>
+
+<p>{colors2}</p>
+     
     </div>
 )
 }

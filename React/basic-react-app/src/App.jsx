@@ -8,9 +8,12 @@ import Die from './default_props';
 
 import ColorLiset from './Passing_array';
 
+import ColorList from './ColorList';
+
 
 function App() {
    let colorArray = ["Red", "Green", "Blue", "Pink"];
+   let colorObject={r:"Red", g:"Green", b:"Blue", p:"Pink"};
   return (
     <div>
       <h1>Component 1</h1>
@@ -24,7 +27,12 @@ function App() {
         <Die/>
 
 
-     <ColorLiset colors={colorArray}/>
+     <ColorLiset colors={colorArray} colors2={colorObject}/>
+
+   
+
+
+     <ColorList colors={colorArray}/>
 
     </div>
   );
