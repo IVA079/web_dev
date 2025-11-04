@@ -1,6 +1,7 @@
-function Greeting()
+function Greeting(props)
 {
-    return <h2>hello, welcome to my website</h2>
+    console.log(props.person);
+    return <h2>hello {props.person}, welcome to my website</h2>
 }
 
 
