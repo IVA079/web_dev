@@ -13,6 +13,7 @@ import ColorList from './ColorList';
 import Rendering from './Rendering_array';
 
 import DoubleDice from './DoubleDice';
+import Button from './Button';
 
 
 function App() {
@@ -46,7 +47,9 @@ function App() {
       <h1>🎲 Dice Game</h1>
       <DoubleDice />
 
+      <Button/>
 
+   
     </div>
   );
 }
