@@ -6,7 +6,11 @@ import Greeting from './Greeting';
 import Passing from './passing_multiple_props';
 import Die from './default_props';
 
+import ColorLiset from './Passing_array';
+
+
 function App() {
+   let colorArray = ["Red", "Green", "Blue", "Pink"];
   return (
     <div>
       <h1>Component 1</h1>
@@ -18,6 +22,9 @@ function App() {
         <Die  num={20}   />
 
         <Die/>
+
+
+     <ColorLiset colors={colorArray}/>
 
     </div>
   );
