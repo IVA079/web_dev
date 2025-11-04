@@ -12,34 +12,39 @@ import ColorList from './ColorList';
 
 import Rendering from './Rendering_array';
 
+import DoubleDice from './DoubleDice';
+
 
 function App() {
-   let colorArray = ["Red", "Green", "Blue", "Pink"];
-   let colorObject={r:"Red", g:"Green", b:"Blue", p:"Pink"};
-   let options=[<li>"blue</li>,<li>"red</li>];
+  let colorArray = ["Red", "Green", "Blue", "Pink"];
+  let colorObject = { r: "Red", g: "Green", b: "Blue", p: "Pink" };
+  let options = [<li>"blue</li>, <li>"red</li>];
 
 
   return (
     <div>
       <h1>Component 1</h1>
-    
-        <Greeting person="alison" />
 
-        <Passing person="tima" from="elon"/>
+      <Greeting person="alison" />
 
-        <Die  num={20}   />
+      <Passing person="tima" from="elon" />
 
-        <Die/>
+      <Die num={20} />
 
-
-     <ColorLiset colors={colorArray} colors2={colorObject.r}/>
-
-   
+      <Die />
 
 
-    <Rendering features={options}/>
+      <ColorLiset colors={colorArray} colors2={colorObject.r} />
 
 
+
+
+      <Rendering features={options} />
+
+
+
+      <h1>🎲 Dice Game</h1>
+      <DoubleDice />
 
 
     </div>
