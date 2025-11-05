@@ -17,6 +17,8 @@ import Button from './Button';
 
 import Example from './non_click_event';
 
+import Form from './form';
+
 
 function App() {
   let colorArray = ["Red", "Green", "Blue", "Pink"];
@@ -52,6 +54,9 @@ function App() {
       <Button/>
 
       <Example/>
+
+      <Form/>
+
    
     </div>
   );
