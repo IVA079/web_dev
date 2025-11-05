@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 import Counter from './Counter'
+import Counter2 from './Use_state'
 
 function App() {
   
@@ -11,6 +12,7 @@ function App() {
 return (
     <div>
       <Counter />
+      <Counter2/>
     </div>
   );
 
