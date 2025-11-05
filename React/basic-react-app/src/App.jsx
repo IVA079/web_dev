@@ -15,6 +15,8 @@ import Rendering from './Rendering_array';
 import DoubleDice from './DoubleDice';
 import Button from './Button';
 
+import Example from './non_click_event';
+
 
 function App() {
   let colorArray = ["Red", "Green", "Blue", "Pink"];
@@ -49,6 +51,7 @@ function App() {
 
       <Button/>
 
+      <Example/>
    
     </div>
   );
