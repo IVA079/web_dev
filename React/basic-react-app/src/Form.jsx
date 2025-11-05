@@ -1,11 +1,15 @@
 
-
+function handleSubmit(e)
+{
+    e.preventDefault();
+    console.log("submitted")
+}
 
 function Form()
 {
   return (
 
-<form>
+<form onSubmit={handleSubmit}> 
 
 <button >
 
