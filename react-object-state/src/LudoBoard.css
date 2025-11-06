@@ -1,0 +1,78 @@
+
+
+
+
+
+
+body {
+  background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.title {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 400px;
+}
+
+.cell {
+  border-radius: 15px;
+  padding: 20px;
+  color: white;
+  font-size: 1.2em;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+}
+
+.cell:hover {
+  transform: scale(1.05);
+}
+
+button {
+  background-color: white;
+  border: none;
+  color: #333;
+  padding: 8px 16px;
+  margin-top: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+
+/* 🎨 Individual color boxes */
+.blue {
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+}
+
+.yellow {
+  background: linear-gradient(135deg, #fddb92, #d1fdff);
+  color: #333;
+}
+
+.green {
+  background: linear-gradient(135deg, #a8ff78, #78ffd6);
+  color: #333;
+}
+
+.red {
+  background: linear-gradient(135deg, #ff0844, #ffb199);
+}
