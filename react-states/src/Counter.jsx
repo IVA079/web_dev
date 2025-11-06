@@ -32,5 +32,8 @@ export default Counter;
 
 
 
+///you cannot write JSX inside a normal function (like you tried here):
+
+//Write JSX (HTML-like code) inside the return block.
 
 
