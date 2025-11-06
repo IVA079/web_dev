@@ -9,6 +9,21 @@ function LudoBoard() {
     green: 0,
   });
 
+
+  let [count,setcount]=useState(0);
+let updateBlue=()=>
+{
+   // move.blue=move.blue+1;
+    console.log(move);
+
+  set({ ...move, blue: move.blue + 1 });
+
+}
+
+
+
+
+
   return (
     <>
       <h2 className="title">🎲 Game Begins 🎲</h2>
@@ -16,7 +31,7 @@ function LudoBoard() {
       <div className="board">
         <div className="cell blue">
           <p>Blue move = {move.blue}</p>
-          <button>+1</button>
+          <button onClick={updateBlue}>+1</button>
         </div>
 
         <div className="cell yellow">
