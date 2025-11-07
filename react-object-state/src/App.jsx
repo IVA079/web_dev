@@ -6,6 +6,9 @@ import './App.css';
 import EmojiClickerA from './EmojiClicker';
 
 
+import EmojiClickerB from './EmojiClickerB';
+
+
 
 function App() {
   
@@ -16,6 +19,9 @@ function App() {
       <h1>Component 1</h1>
 
 <EmojiClickerA/>
+
+<h1>.     second version</h1>
+<EmojiClickerB/>
     </div>
   );
 }
