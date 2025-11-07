@@ -11,19 +11,20 @@ import EmojiClickerB from './EmojiClickerB';
 
 import E_e from './e_example';
 
-
+import TodoList from './TodoList/TodoList';
+import Example3 from './TodoList/Example3';
 
 function App() {
-  
+
 
 
   return (
     <div>
-     <h1>Component 1</h1>
+      <h1>Component 1</h1>
 
+     <Example3/>
 
-
-<E_e/>
+    
 
 
 
