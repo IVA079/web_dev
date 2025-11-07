@@ -2,13 +2,13 @@
 
 
 
-import './DoubleDice.css';  // 👈 import your CSS file
+import './DoubleDice.css'; 
 
 function DoubleDice() {
   const num1 = Math.floor(Math.random() * 6) + 1;
   const num2 = Math.floor(Math.random() * 6) + 1;
 
-  // 👇 Decide the class name using if...else
+  //  Decide the class name using if...else
   let className = "";
   if (num1 === num2) {
     className = "win";

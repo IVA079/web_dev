@@ -17,7 +17,7 @@ function LudoBoard() {
 let updateBlue=()=>
 {
    // move.blue=move.blue+1;
-    console.log(move);
+ //   console.log(move);
 
   //set({ ...move, blue: move.blue + 1 });
 set((prevmove)=>
@@ -30,6 +30,7 @@ arr.push("blue moves");
 set_arr([...arr,"blue move"]);
 
 console.log(arr);
+
 }
 
 
