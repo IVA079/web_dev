@@ -9,6 +9,9 @@ import EmojiClickerA from './EmojiClicker';
 import EmojiClickerB from './EmojiClickerB';
 
 
+import E_e from './e_example';
+
+
 
 function App() {
   
@@ -16,12 +19,14 @@ function App() {
 
   return (
     <div>
-      <h1>Component 1</h1>
+     <h1>Component 1</h1>
 
-<EmojiClickerA/>
 
-<h1>.     second version</h1>
-<EmojiClickerB/>
+
+<E_e/>
+
+
+
     </div>
   );
 }
