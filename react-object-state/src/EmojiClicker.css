@@ -1,0 +1,41 @@
+/* 🎉 EmojiClicker.css */
+
+/* Wrapper container */
+.emoji-container {
+  text-align: center;
+  margin-top: 40px;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+/* Title */
+.emoji-title {
+  font-size: 2rem;
+  color: #333;
+}
+
+/* Button */
+.emoji-button {
+  font-size: 1.5rem;
+  padding: 0.5rem 1rem;
+  background-color: #ffd700;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.emoji-button:hover {
+  transform: scale(1.1);
+  background-color: #ffcd00;
+}
+
+/* Emoji display area */
+.emoji-display {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+.emoji-display span {
+  margin: 5px;
+  display: inline-block;
+}

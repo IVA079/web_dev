@@ -11,6 +11,9 @@ function LudoBoard() {
 
 
   let [count,setcount]=useState(0);
+
+  let[arr,set_arr]=useState(["no move"]);
+
 let updateBlue=()=>
 {
    // move.blue=move.blue+1;
@@ -19,17 +22,43 @@ let updateBlue=()=>
   //set({ ...move, blue: move.blue + 1 });
 set((prevmove)=>
 {
-return {...prevmove,blue:move.blue+1};
-})
+return {...prevmove,blue:prevmove.blue+1};
+});
+
+arr.push("blue moves");
+
+set_arr([...arr,"blue move"]);
+
+console.log(arr);
 }
 
 
 
 
 
+
+let updatey=()=>
+{
+   // move.blue=move.blue+1;
+    console.log(move);
+
+  //set({ ...move, blue: move.blue + 1 });
+set((prevmove)=>
+{
+return {...prevmove,yellow:prevmove.yellow+1};
+});
+
+arr.push("y moves");
+
+set_arr([...arr,"y  move"]);
+}
+
+
+
   return (
     <>
       <h2 className="title">🎲 Game Begins 🎲</h2>
+      <p> {arr}</p>
 
       <div className="board">
 
@@ -42,7 +71,7 @@ return {...prevmove,blue:move.blue+1};
 
         <div className="cell yellow">
           <p>Yellow move = {move.yellow}</p>
-          <button>+1</button>
+          <button onClick={updatey}>+1</button>
         </div>
 
         <div className="cell green">
