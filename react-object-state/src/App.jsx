@@ -24,11 +24,11 @@ function App() {
   return (
     <div>
       <h1>Component 1</h1>
-
+<TodoList/>
      <Example3/>
 
     
-<E3State/>
+       <E3State/>
 
 
     </div>

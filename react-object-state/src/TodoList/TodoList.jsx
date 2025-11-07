@@ -6,70 +6,87 @@ import { useState } from "react";
 export default function TodoList() {
 
 
-    let [arr, set] = useState([" "]);
-    
-    let [text, setText] = useState("");
+    let [arr, setArr] = useState([]);
 
-
-       let add=()=>
-
-
-        {
+    let [text, settext] = useState("");
 
 
 
-            set([...arr,"a"])
-        }
+    let handlechange = (e) => {
+        settext(e.target.value);
+        console.log(e.target.value)
+    }
 
+
+    let add = () => {
+        setArr([...arr, text]);
+    }
 
 
 
 
 
     return (
-        <div>
+        <>
+            <h2>📝 Todo List</h2>
 
-            <input placeholder="add a tak" value={text}></input>
-            <button onClick={add}>add a task</button>
-            <hr></hr>
-
-            <h2>task todo</h2>
-
-
-
-
-
-            
-
-             {
-
-                     arr.map(
+            <input
+                placeholder="Add a task"
+                value={text}
+                onChange={handlechange}
+                style={{ padding: "8px", width: "200px", marginRight: "10px" }}
+            />
 
 
-                      (e) => {
-                        
+
+
+
+            <button
+                onClick={add}
+                style={{
+                    padding: "8px 12px",
+                    backgroundColor: "#4CAF50",
+                    color: "white",
+                    border: "none",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                }}
+            >
+                Add Task
+            </button>
+
+
+
+
+
+
+
+
+            <hr style={{ width: "300px", margin: "20px auto" }} />
+
+            <h3>📋 Tasks to do:</h3>
+
+
+
+            {
+                arr.map(
+                    (e) => {
                         return <p>{e}</p>;
-                    
                     }
 
-
                 )
+            }
 
 
 
-
-
-
-             }   
-
-        
-
-
-
-
-        </div>
-
+        </>
 
 
     )
+
 }
+
+
+
+
+
